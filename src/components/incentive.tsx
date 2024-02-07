@@ -1,3 +1,6 @@
+import mockup from '@/images/mockup.jpg';
+import Image from 'next/image';
+
 const incentives = [
   {
     name: 'Simple et gratuit',
@@ -40,8 +43,8 @@ export function Incentive() {
               </p>
             </div>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100'>
-              <img
-                src='https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg'
+              <Image
+                src={mockup}
                 alt=''
                 className='object-cover object-center'
               />

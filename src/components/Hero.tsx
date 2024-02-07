@@ -1,6 +1,5 @@
 import { useId } from 'react';
 import Image from 'next/image';
-import clsx from 'clsx';
 
 import { AppDemo } from '@/components/app-demo';
 import { Button } from '@/components/Button';
@@ -117,7 +116,7 @@ export function Hero() {
                 ['atmoLogo', atmoLogo],
                 ['rnsaLogo', rnsaLogo],
                 ['irsnLogo', irsnLogo],
-              ].map(([name, logo, className]) => (
+              ].map(([name, logo]) => (
                 <li key={name as string}>
                   <Image
                     src={logo}
