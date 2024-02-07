@@ -4,11 +4,11 @@ export const marianneFont = localFont({
   src: [
     {
       path: './Marianne-Bold.otf',
-      weight: '800',
+      weight: '900',
     },
     {
       path: './Marianne-BoldItalic.otf',
-      weight: '800',
+      weight: '900',
       style: 'italic',
     },
     {

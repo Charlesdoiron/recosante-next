@@ -1,6 +1,5 @@
 import { type Config } from 'tailwindcss';
 import formsPlugin from '@tailwindcss/forms';
-
 import headlessuiPlugin from '@headlessui/tailwindcss';
 
 export default {
@@ -26,6 +25,8 @@ export default {
     },
     extend: {
       animation: {
+        scroll:
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         'fade-in': 'fade-in 0.5s linear forwards',
         marquee: 'marquee var(--marquee-duration) linear infinite',
         'spin-slow': 'spin 4s linear infinite',
@@ -49,6 +50,7 @@ export default {
           'gray-300': '#D9D9EF',
           yellow: '#F2D072',
           primary: '#3343BD',
+          dark: '#000A8B',
           50: '#f1f4ff',
           100: '#e5e8ff',
           200: '#ced5ff',
@@ -66,6 +68,11 @@ export default {
         sans: 'var(--font-inter)',
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
         'fade-in': {
           from: {
             opacity: '0',

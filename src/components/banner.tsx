@@ -6,7 +6,7 @@ export function Banner() {
   const [isOpen, setIsOpen] = useState(true);
   if (!isOpen) return null;
   return (
-    <div className='relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50  sm:before:flex-1 p-6'>
+    <div className='relative isolate  items-center gap-x-6 overflow-hidden bg-gray-50  sm:before:flex-1 p-6 hidden  lg:flex'>
       <div
         className='absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl'
         aria-hidden='true'
