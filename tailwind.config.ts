@@ -7,18 +7,7 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      marianneBold: 'Marianne-Bold',
-      marianneBoldItalic: 'Marianne-BoldItalic',
-      marianneExtraBold: 'Marianne-ExtraBold',
-      marianneExtraBoldItalic: 'Marianne-ExtraBoldItalic',
-      marianneLight: 'Marianne-Light',
-      marianneLightItalic: 'Marianne-LightItalic',
-      marianneMedium: 'Marianne-Medium',
-      marianneMediumItalic: 'Marianne-MediumItalic',
-      marianneRegular: 'Marianne-Regular',
-      marianneRegularItalic: 'Marianne-RegularItalic',
-      marianneThin: 'Marianne-Thin',
-      marianneThinItalic: 'Marianne-ThinItalic',
+      app: ['var(--font-marianne)'],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

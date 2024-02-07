@@ -20,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang='en'
-      className={clsx('h-full bg-gray-50 antialiased', marianneFont.className)}
+      lang='fr'
+      className={clsx('h-full bg-gray-50 antialiased', marianneFont.variable)}
     >
-      <body className='flex h-full flex-col font-marianneRegular'>
+      <body className='flex h-full flex-col font-app font-medium'>
         <div className='flex min-h-full flex-col'>{children}</div>
       </body>
     </html>
