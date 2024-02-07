@@ -1,10 +1,25 @@
 import { type Config } from 'tailwindcss';
 import formsPlugin from '@tailwindcss/forms';
+
 import headlessuiPlugin from '@headlessui/tailwindcss';
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    fontFamily: {
+      marianneBold: 'Marianne-Bold',
+      marianneBoldItalic: 'Marianne-BoldItalic',
+      marianneExtraBold: 'Marianne-ExtraBold',
+      marianneExtraBoldItalic: 'Marianne-ExtraBoldItalic',
+      marianneLight: 'Marianne-Light',
+      marianneLightItalic: 'Marianne-LightItalic',
+      marianneMedium: 'Marianne-Medium',
+      marianneMediumItalic: 'Marianne-MediumItalic',
+      marianneRegular: 'Marianne-Regular',
+      marianneRegularItalic: 'Marianne-RegularItalic',
+      marianneThin: 'Marianne-Thin',
+      marianneThinItalic: 'Marianne-ThinItalic',
+    },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -34,9 +49,30 @@ export default {
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
-      colors: ({ colors }) => ({
-        gray: colors.neutral,
-      }),
+      colors: {
+        muted: '#555555',
+        'muted-100': '#9C9C9C',
+        dark: '#232323',
+        app: {
+          green: '#4FCBAD',
+          gray: '#ECF1FB',
+          'gray-100': '#AEB1B7',
+          'gray-300': '#D9D9EF',
+          yellow: '#F2D072',
+          primary: '#3343BD',
+          50: '#f1f4ff',
+          100: '#e5e8ff',
+          200: '#ced5ff',
+          300: '#a7b1ff',
+          400: '#767fff',
+          500: '#3f42ff',
+          600: '#2118ff',
+          700: '#1007fa',
+          800: '#0d05d2',
+          900: '#0c06ac',
+          950: '#000091', // this is the main color
+        },
+      },
       fontFamily: {
         sans: 'var(--font-inter)',
       },
@@ -65,5 +101,9 @@ export default {
       },
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [
+    formsPlugin,
+    headlessuiPlugin,
+    require('@tailwindcss/aspect-ratio'),
+  ],
 } satisfies Config;

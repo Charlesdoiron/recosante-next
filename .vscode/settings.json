@@ -5,7 +5,7 @@
     "viewClassName"
   ],
   "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#ff3fc5",
-    "titleBar.inactiveBackground": "#ff3fc5"
+    "titleBar.activeBackground": "#ff753f",
+    "titleBar.inactiveBackground": "#ff753f"
   }
 }
