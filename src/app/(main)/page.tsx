@@ -1,5 +1,5 @@
 import { CallToAction } from '@/components/CallToAction';
-import { Hero } from '@/components/hero';
+import { Hero } from '@/components/hero-banner';
 import { PrimaryFeatures } from '@/components/primary-features';
 import { Reviews } from '@/components/Reviews';
 import { Notification } from '@/components/notifications';
