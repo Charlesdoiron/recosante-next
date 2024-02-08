@@ -5,10 +5,15 @@ import { Reviews } from '@/components/Reviews';
 import { Notification } from '@/components/notifications';
 import { Incentive } from '@/components/incentive';
 import { Carousel } from '@/components/carousel';
+import { Meta } from '@/components/head';
 
 export default function Home() {
   return (
     <>
+      <Meta
+        title="Recosanté - Voyez l'impact de l'environnement sur votre santé, et agissez."
+        description='Télécharger l’application Recosanté.'
+      />
       <Hero />
       <PrimaryFeatures />
       <Notification />

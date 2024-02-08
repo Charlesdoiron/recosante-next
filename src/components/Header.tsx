@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo';
+import { GouvLogo } from '@/images/logos/gouv';
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -55,8 +56,9 @@ export function Header() {
       <nav>
         <Container className='relative z-50 flex justify-between py-8'>
           <div className='relative z-10 flex items-center gap-16'>
-            <Link href='/' aria-label='Home'>
-              <Logo className='h-10 w-auto' />
+            <Link href='/' aria-label='Home' className='flex items-center'>
+              <GouvLogo className='h-32 w-auto -ml-4' />
+              <Logo className='h-20 w-auto' />
             </Link>
           </div>
         </Container>

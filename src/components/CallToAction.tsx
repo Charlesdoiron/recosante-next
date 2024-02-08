@@ -22,7 +22,11 @@ export function CallToAction() {
             leur vie de tous les jours.
           </p>
           <div className='mt-8 flex justify-center'>
-            <Button href='#' className='hidden lg:block bg-app-black'>
+            <Button
+              href='https://recosante.beta.gouv.fr/download/'
+              target='_blank'
+              className='hidden lg:block bg-app-black'
+            >
               Télécharger l'application
             </Button>
           </div>

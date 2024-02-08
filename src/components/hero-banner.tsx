@@ -91,7 +91,12 @@ export function Hero() {
               santé et celle de votre famille.
             </p>
             <div className='mt-8 text-center sm:text-left'>
-              <Button href='#' variant='solid' color='primary'>
+              <Button
+                href='https://recosante.beta.gouv.fr/download/'
+                target='_blank'
+                variant='solid'
+                color='primary'
+              >
                 Télécharger l'application
               </Button>
             </div>

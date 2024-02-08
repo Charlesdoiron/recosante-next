@@ -3,6 +3,7 @@ import PollenScreenshot from '@/images/screenshot/pollen.png';
 import AirScreenshot from '@/images/screenshot/air.png';
 import UvScreenshot from '@/images/screenshot/uv.png';
 import WeatherScreenshot from '@/images/screenshot/weather.png';
+import WaterScreenshot from '@/images/screenshot/water.png';
 
 import Image from 'next/image';
 
@@ -71,7 +72,7 @@ const features = [
     description:
       'Qualité microbiologique des eaux de baignade dans les zones de baignade désignées, vous permettant de prendre des décisions éclairées concernant la sécurité de la baignade et votre santé lors de vos activités aquatiques.',
     icon: WaterLogo,
-    screen: InvestScreen,
+    screen: WaterScreen,
   },
 ];
 
@@ -183,55 +184,14 @@ function WeatherScreen(props: ScreenProps) {
   );
 }
 
-function InvestScreen(props: ScreenProps) {
+function WaterScreen(props: ScreenProps) {
   return (
     <AppScreen className='w-full'>
-      <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
-        <AppScreen.Subtitle>
-          <span className='text-white'>$34.28</span> per share
-        </AppScreen.Subtitle>
-      </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className='px-4 py-6'>
-          <div className='space-y-4'>
-            {[
-              { label: 'Number of shares', value: '100' },
-              {
-                label: 'Current market price',
-                value: (
-                  <div className='flex'>
-                    $34.28
-                    <svg viewBox='0 0 24 24' fill='none' className='h-6 w-6'>
-                      <path
-                        d='M17 15V7H9M17 7 7 17'
-                        stroke='#06B6D4'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
-                  </div>
-                ),
-              },
-              { label: 'Estimated cost', value: '$3,428.00' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className='flex justify-between border-b border-gray-100 pb-4'
-              >
-                <div className='text-sm text-gray-500'>{item.label}</div>
-                <div className='text-sm font-semibold text-gray-900'>
-                  {item.value}
-                </div>
-              </div>
-            ))}
-            <div className='rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white'>
-              Buy shares
-            </div>
-          </div>
+        <div className='rounded-lg overflow-hidden'>
+          <Image src={WaterScreenshot} alt='App demo' />
         </div>
       </MotionAppScreenBody>
     </AppScreen>

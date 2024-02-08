@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { TextField } from '@/components/Fields';
 import { Logomark } from '@/components/Logo';
 import { NavLinks } from '@/components/NavLinks';
-import qrCode from '@/images/qr-code.svg';
+import qrCode from '@/images/qr-code.png';
+import { GouvLogo } from '@/images/logos/gouv';
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -27,6 +26,7 @@ export function Footer() {
         <div className='flex flex-col items-start justify-between gap-y-12 pb-6 pt-16 lg:flex-row lg:items-center lg:py-16'>
           <div>
             <div className='flex items-center text-gray-900'>
+              <GouvLogo className='h-40 w-auto -ml-4' />
               <Logomark />
             </div>
             <nav className='mt-11 flex gap-8'>

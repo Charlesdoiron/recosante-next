@@ -42,7 +42,11 @@ export function Banner() {
             <circle cx={1} cy={1} r={1} />
           </svg>
           La nouvelle version de l'application est disponible.
-          <a href='#' className='border-b ml-2 border-black'>
+          <a
+            target='_blank'
+            href='https://recosante.beta.gouv.fr/download/'
+            className='border-b ml-2 border-black'
+          >
             Télécharger la !
           </a>
         </p>

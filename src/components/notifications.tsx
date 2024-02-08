@@ -1,9 +1,13 @@
-import {
-  LifebuoyIcon,
-  NewspaperIcon,
-  PhoneIcon,
-} from '@heroicons/react/20/solid';
+'use client';
 
+import { toast } from 'sonner';
+import { Button } from './Button';
+import Notification1 from '@/images/screenshot/notif.png';
+import Notification2 from '@/images/screenshot/notif2.png';
+import Notification3 from '@/images/screenshot/notif3.png';
+import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
+import { useEffect } from 'react';
 const cards = [
   {
     name: 'Les nouvelles matinales',
@@ -25,13 +29,47 @@ const cards = [
 ];
 
 export function Notification() {
+  const { ref, inView, entry } = useInView({
+    delay: 600,
+  });
+  useEffect(() => {
+    if (inView) {
+      toast.custom((t) => (
+        <div className='w-[400px] '>
+          <Image
+            src={Notification1}
+            alt='Notification screenshot'
+            className='w-[400px] h-auto '
+          />
+        </div>
+      ));
+      setTimeout(() => {
+        toast.custom((t) => (
+          <div className='w-[400px] '>
+            <Image
+              src={Notification2}
+              alt='Notification screenshot'
+              className='w-[400px] h-auto '
+            />
+          </div>
+        ));
+      }, 2000);
+      setTimeout(() => {
+        toast.custom((t) => (
+          <div className='w-[400px] '>
+            <Image
+              src={Notification3}
+              alt='Notification screenshot'
+              className='w-[400px] h-auto '
+            />
+          </div>
+        ));
+      }, 4000);
+    }
+  }, [inView]);
+
   return (
     <div className='relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32'>
-      {/* <img
-        src='https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply'
-        alt=''
-        className='absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-50'
-      /> */}
       <div className='hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl'>
         <div
           className='aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#F2D072] to-[#3343BD] opacity-20'
@@ -61,7 +99,10 @@ export function Notification() {
             notifications en temps réel.
           </p>
         </div>
-        <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-12'>
+        <div
+          ref={ref}
+          className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-12'
+        >
           {cards.map((card) => (
             <div
               key={card.name}
