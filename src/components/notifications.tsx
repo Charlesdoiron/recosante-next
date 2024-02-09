@@ -1,13 +1,13 @@
 'use client';
 
-import { toast } from 'sonner';
-import { Button } from './Button';
-import Notification1 from '@/images/screenshot/notif.png';
-import Notification2 from '@/images/screenshot/notif2.png';
-import Notification3 from '@/images/screenshot/notif3.png';
+// import { toast } from 'sonner';
+// import { Button } from './Button';
+// import Notification1 from '@/images/screenshot/notif.png';
+// import Notification2 from '@/images/screenshot/notif2.png';
+// import Notification3 from '@/images/screenshot/notif3.png';
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
-import { useEffect } from 'react';
+// import Image from 'next/image';
+// import { useEffect } from 'react';
 const cards = [
   {
     name: 'Les nouvelles matinales',
@@ -32,41 +32,41 @@ export function Notification() {
   const { ref, inView, entry } = useInView({
     delay: 600,
   });
-  useEffect(() => {
-    if (inView) {
-      toast.custom((t) => (
-        <div className='w-[400px] '>
-          <Image
-            src={Notification1}
-            alt='Notification screenshot'
-            className='w-[400px] h-auto '
-          />
-        </div>
-      ));
-      setTimeout(() => {
-        toast.custom((t) => (
-          <div className='w-[400px] '>
-            <Image
-              src={Notification2}
-              alt='Notification screenshot'
-              className='w-[400px] h-auto '
-            />
-          </div>
-        ));
-      }, 2000);
-      setTimeout(() => {
-        toast.custom((t) => (
-          <div className='w-[400px] '>
-            <Image
-              src={Notification3}
-              alt='Notification screenshot'
-              className='w-[400px] h-auto '
-            />
-          </div>
-        ));
-      }, 4000);
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     toast.custom((t) => (
+  //       <div className='w-[400px] '>
+  //         <Image
+  //           src={Notification1}
+  //           alt='Notification screenshot'
+  //           className='w-[400px] h-auto '
+  //         />
+  //       </div>
+  //     ));
+  //     setTimeout(() => {
+  //       toast.custom((t) => (
+  //         <div className='w-[400px] '>
+  //           <Image
+  //             src={Notification2}
+  //             alt='Notification screenshot'
+  //             className='w-[400px] h-auto '
+  //           />
+  //         </div>
+  //       ));
+  //     }, 2000);
+  //     setTimeout(() => {
+  //       toast.custom((t) => (
+  //         <div className='w-[400px] '>
+  //           <Image
+  //             src={Notification3}
+  //             alt='Notification screenshot'
+  //             className='w-[400px] h-auto '
+  //           />
+  //         </div>
+  //       ));
+  //     }, 4000);
+  //   }
+  // }, [inView]);
 
   return (
     <div className='relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32'>

@@ -9,10 +9,21 @@ export function NavLinks() {
   let timeoutRef = useRef<number | null>(null);
 
   return [
-    ['Features', '/#features'],
-    ['Reviews', '/#reviews'],
-    ['Pricing', '/#pricing'],
-    ['FAQs', '/#faqs'],
+    [
+      'Accessibilité : partiellement conforme',
+      'https://recosante.beta.gouv.fr/accessibilite/',
+    ],
+    ['Mentions légales', 'https://recosante.beta.gouv.fr/mentions-legales/'],
+    [
+      'Données personnelles',
+      'https://recosante.beta.gouv.fr/donnees-personnelles/',
+    ],
+    ['Partenaires', 'https://recosante.beta.gouv.fr/partenaires/'],
+    ['Articles', 'https://recosante.beta.gouv.fr/articles/'],
+    ['Gestion des cookies', 'https://recosante.beta.gouv.fr/cookies/'],
+    ['Statistiques', 'https://recosante.beta.gouv.fr/stats/'],
+    ['Recommandations', 'https://recosante.beta.gouv.fr/recommandations/'],
+    ['Contactez-nous', '/#pricing'],
   ].map(([label, href], index) => (
     <Link
       key={label}
@@ -44,7 +55,7 @@ export function NavLinks() {
           />
         )}
       </AnimatePresence>
-      <span className='relative z-10'>{label}</span>
+      <span className='relative z-10 text-xs'>{label}</span>
     </Link>
   ));
 }
