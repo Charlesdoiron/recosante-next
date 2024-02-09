@@ -6,6 +6,7 @@ import { Notification } from '@/components/notifications';
 import { Incentive } from '@/components/incentive';
 import { Carousel } from '@/components/carousel';
 import { Meta } from '@/components/head';
+import BlogPreview from '@/components/blog-preview';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <CallToAction />
       <Carousel />
       <Incentive />
+      <BlogPreview />
       <Reviews />
     </>
   );
