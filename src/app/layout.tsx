@@ -7,10 +7,10 @@ import { marianneFont } from '@/assets/fonts';
 export const metadata: Metadata = {
   title: {
     template: '%s - Recosanté',
-    default: 'Reconsanté - Invest at the perfect time.',
+    default:
+      "Recosanté - Voyez l'impact de l'environnement sur votre santé, et agissez.",
   },
-  description:
-    'By leveraging insights from our network of industry insiders, you’ll know exactly when to buy to maximize profit, and exactly when to sell to avoid painful losses.',
+  description: 'Télécharger l’application Recosanté.',
 };
 
 export default function RootLayout({
